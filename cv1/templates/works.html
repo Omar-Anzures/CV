@@ -1,0 +1,16 @@
+ {% extends 'base.html' %}
+ {% block content %}
+{%for work in work%}
+            <div class="box">
+                <h4 id="const" class="title is-3">{{work.name}}</h4>
+                <article class="message is-primary">
+                  <span class="icon has-text-primary">
+                    <i class="fas fa-briefcase"></i>
+                  </span>
+                  <div class="message-body">
+                    {{work.description}}
+                  </div>
+                </article>
+            </div>
+{%endfor%}
+{% endblock content %} 

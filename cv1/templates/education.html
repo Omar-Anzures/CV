@@ -1,0 +1,18 @@
+ {% extends 'base.html' %}
+ {% block content %}
+
+ {%for education in education %}
+          <h3 class="title is-3">Educacion</h3>
+          <div class="box">
+            <h4 id="lorem" class="title is-4">{{education.school_name}}</h4> 
+              <span class="icon has-text-primary">
+                <i class="fas fa-graduation-cap"></i>
+              </span>
+              <div class="message-body">
+                <p>Titulo: {{education.name}}</p>
+                <p>Del {{education.start_year}} al {{education.end_year}}</p>
+            </div>
+          </div>
+         
+ {%endfor%}
+{% endblock content %}

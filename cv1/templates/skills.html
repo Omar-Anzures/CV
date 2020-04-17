@@ -1,0 +1,26 @@
+ {% extends 'base.html' %}
+ {% block content %}
+{%for skills in skills %}
+        
+         <div class="box">
+          <article class="media">
+            <div class="media-left">
+              <figure class="image is-64x64">
+                <img src="{{skills.icon.url}}" alt="Image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>{{skills.name}}</strong>
+                  <br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+                </p>
+                <p>Porcentaje: {{skills.porcentage}}%</p>
+                <progress class="progress is-info" value="{{skills.porcentage}}" max="100">{{skills.porcentage}}%</progress>
+              </div>
+            </div>
+          </article>
+        </div>
+{%endfor%}  
+{% endblock content %}
